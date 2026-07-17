@@ -30,7 +30,7 @@ blueValue = 0;
 
 
 
-for(int i = 0; i < 255; i += 1) // fades out the red and bring green full when i=255
+for(int i = 0; i < 255; i += 1) //  out the red and bring green full when i=255
 {
 redValue -= 1;
 greenValue += 1;
@@ -44,7 +44,7 @@ redValue = 0;
 greenValue = 255;
 blueValue = 0;
 
-for(int i = 0; i < 255; i += 1) // fades out green bring blue full when i=255
+for(int i = 0; i < 255; i += 1) // out green bring blue full when i=255
 {
 greenValue -= 1;
 blueValue += 1;
@@ -58,7 +58,7 @@ redValue = 0;
 greenValue = 0;
 blueValue = 255;
 
-for(int i = 0; i < 255; i += 1) // fades out blue bring red full when i=255
+for(int i = 0; i < 255; i += 1) //  out blue bring red full when i=255
 {
 blueValue -= 1;
 redValue += 1;
