@@ -5,7 +5,8 @@ distance in real time, display it on a 16x2 I2C LCD, and trigger an LED +
 warning message when an object comes within 6 cm.
 
 This was built as a foundational practice project — understanding how 
-ultrasonic sensing, LCD output, and threshold-based alerts work
+ultrasonic sensing, LCD output, and threshold-based alerts work.
+
 
 ## Hardware
 
@@ -33,3 +34,13 @@ pulse, and the ECHO pin stays HIGH for exactly as long as it takes the
 sound to travel to an object and bounce back.
 
 Distance is calculated as:
+distance (cm) = (echo duration × 0.034) / 2
+
+The result is divided by 2 because the measured time covers the sound's 
+full round trip (sensor → object → sensor), not just the one-way distance.
+
+If the measured distance is 6 cm or less, the system enters warning mode: 
+the LCD displays "Object Too Close" and the LED blinks. Otherwise, the LCD 
+shows the live distance reading.
+
+
